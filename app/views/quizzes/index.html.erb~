@@ -1,0 +1,7 @@
+<h1>Welcome, user!</h1>
+
+<% @quizzes.each do |quiz| %>
+  <h2><%= link_to quiz.title, quiz %></h2><span><%= quiz.number_of_questions %> questions. Created <%= time_ago_in_words quiz.created_at %> ago</span>
+<% end %>
+
+<p><%= link_to "New Quiz", new_quiz_path %></p>
